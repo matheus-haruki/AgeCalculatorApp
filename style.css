@@ -1,0 +1,254 @@
+/* Base styles (default for desktop 1440px) */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: 'Poppins ExtraBold Italic';
+    src: url('assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins Fino';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background-color: #f0f0f0;
+    flex: 1;
+}
+
+.container {
+    width: 840px;
+    height: 660px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border-bottom-right-radius: 190px;
+}
+
+form {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.form-group:first-child {
+    padding-left: 60px;
+}
+
+.label {
+    color: #6D6D6D;
+    font-family: "Poppins";
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.label-error {
+    color: #ff0000;
+    font-family: "Poppins";
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 160px;
+    height: 70px;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    border: 1px solid #DCDCDC;
+    font-size: 32px;
+    color: black;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+h3 {
+    font-family: 'Poppins Fino';
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 400i;
+    font-style: italic;
+}
+
+.empty-hidden {
+    display: none;
+}
+
+.invalid-hidden {
+    display: none;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #7C50FF;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: black;
+}
+
+hr {
+    width: 630px;
+    border: 1.5px solid #ECECEC;
+    margin-left: 60px;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.result-container {
+    padding-left: 60px;
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: bold;
+    display: block;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    font-size: 55px;
+    gap: 10px;
+}
+
+.result-year, .result-month, .result-day {
+    color: #7D50F7;
+    font-size: 70px;
+    font-family: 'Poppins ExtraBold Italic';
+}
+
+.attribution {
+    font-family: 'Poppins';
+    font-size: 12px;
+    text-align: center;
+    color: #6D6D6D;
+    background-color: #f0f0f0;
+}
+
+.attribution a {
+    color: #7C50FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+    .container {
+      width: 90%;
+      height: auto;
+      padding: 40px 20px;
+      border-radius: 20px;
+      border-bottom-right-radius: 100px;
+    }
+  
+    form {
+      flex-direction: row;
+      gap: 15px;
+      justify-content: center;
+    }
+  
+    .form-group {
+      padding-top: 30px;
+      flex: 1;
+    }
+  
+    .form-group:first-child {
+      padding-left: 0;
+    }
+  
+    input {
+      width: 100%;
+      height: 55px;
+      font-size: 20px;
+    }
+  
+    .label {
+      font-size: 10px;
+      text-align: center;
+    }
+  
+    h3 {
+      font-size: 10px;
+      text-align: center;
+    }
+  
+    .btn-container {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  
+    hr {
+      width: 100%;
+      border: 1.5px solid #ECECEC;
+      margin: 0;
+    }
+  
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+    }
+  
+    .result-container {
+      padding-left: 0;
+      padding-top: 10px;
+    }
+  
+    .result {
+      display: flex;
+      align-items: center;
+      font-size: 36px;
+      gap: 10px;
+    }
+  
+    .result + .result {
+      margin-top: 10px;
+    }
+  
+    .result-year,
+    .result-month,
+    .result-day {
+      font-size: 40px;
+    }
+  
+    .attribution {
+      font-size: 10px;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  
