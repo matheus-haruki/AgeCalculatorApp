@@ -1,3 +1,9 @@
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        clique();
+    }
+});
+
 function clique() {
     const day = document.querySelector('.day');
     const month = document.querySelector('.month');
@@ -96,6 +102,7 @@ function clique() {
         idade_ano--;
         idade_mes += 12;
     }
+  
 
     resultYear.innerHTML = idade_ano;
     resultMonth.innerHTML = idade_mes;
